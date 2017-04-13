@@ -1086,6 +1086,14 @@ module Vpim
         @card
       end
 
+      def add_begin
+        @card << Vpim::DirectoryInfo::Field.create( 'BEGIN', 'VCARD');
+      end
+            
+      def add_end
+        @card << Vpim::DirectoryInfo::Field.create( 'END', 'VCARD' );
+      end
+
       private
 
       def initialize(full_name, card) # :nodoc:
